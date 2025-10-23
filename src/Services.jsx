@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import supabase from "./data/supabase";
 
 const Services = () => {
-  const [selectedState, setSelectedState] = useState("");
-  const [selectedDistrict, setSelectedDistrict] = useState("");
   const [villageName, setVillageName] = useState([]);
   const [issue, setIssue] = useState("");
-  const [districts, setDistricts] = useState([]);   
   const [selectedVillage, setSelectedVillage] = useState("");
   const [extraField, setExtraField] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -83,8 +80,6 @@ const handleSubmit = async () => {
     console.error("Error inserting data:", error);
     alert("Error submitting form. Check console.");
   } else {
-    setSelectedState("");
-    setSelectedDistrict("");
     setSelectedVillage("");
     setIssue("");
     setPhoneNumber("");
