@@ -61,7 +61,7 @@ const handleSubmit = async () => {
 
   const departmentToSave = department === "Other" && customDepartment ? customDepartment : department || null;
 
-  const { data, error } = await supabase
+  const { error } = await supabase
     .from("issues")
     .insert([
       {
